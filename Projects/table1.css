@@ -1,0 +1,30 @@
+h4 {
+    color: darkgreen;
+    font-family: Helvetica;
+}
+
+#table1 {
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th,
+td {
+    padding: 20px;
+    border-bottom: 1px solid #ced8e6;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: black;
+}

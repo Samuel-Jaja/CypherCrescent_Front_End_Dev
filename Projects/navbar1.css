@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: pink; */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    /* height: 100; */
+    background-color: white;
+    /* justify-content: center; */
+    justify-content: space-between;
+    position: static;
+    box-shadow: 5px 5px 40px rgba(125, 149, 150, 0.815);
+}
+
+.navbar-brand-logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+
+h2 {
+    color: black;
+    font-family: cursive;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+h3 {
+    font-weight: 500px;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+h4 {
+    color: black;
+    font-family: cursive;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+h2,
+h4 {
+    text-align: center;
+    font-weight: 900px;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.navbar-ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-right: 40px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.navbar-listitem {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+
+/* a.active {
+    color: blanchedalmond;
+    font-size: 22px;
+    font-weight: bolder;
+} */
+
+.navbar-listitem:hover {
+    color: cyan;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container>div {
+    width: 450px;
+    height: 550px;
+    /* background-color: aqua; */
+}
+
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+
+
+/* .inner-left {
+    margin-left: 30px;
+} */
+
+.bottom {
+    /* height: 50px; */
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    background-color: black;
+}
+
+.center img {
+    padding: 20px 20px;
+}
+
+.right img {
+    padding: 70px 100px;
+}
+
+.inner-left form {
+    /* padding-right: 22px; */
+    display: flex;
+    justify-content: center;
+}
+
+.right form {
+    /* padding-right: 22px; */
+    display: flex;
+    justify-content: center;
+}
+
+legend,
+label,
+p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+footer {
+    background-color: white;
+    height: auto;
+    text-align: center;
+}
+
+.center {
+    background-color: aqua;
+}
+
+fieldset {
+    border-radius: 10px;
+}
+
+#submit {
+    border-radius: 4px;
+    background-color: aqua;
+    width: 110px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}

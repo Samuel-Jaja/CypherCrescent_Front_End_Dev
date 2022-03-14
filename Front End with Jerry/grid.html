@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .body {
+            display: grid;
+            grid-template-areas: "header header header header header header" "sidenav content content content content rightnav";
+        }
+        
+        .header {
+            grid-area: header;
+            height: 60px;
+        }
+        
+        .sidenav {
+            grid-area: sidenav;
+            height: 700px;
+        }
+        
+        .content {
+            grid-area: content;
+            height: 700px;
+        }
+        
+        .rightnav {
+            grid-area: rightnav;
+            height: 700px;
+        }
+        
+        .sections {
+            border: 1px solid #000;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="header sections"></div>
+        <div class="sidenav sections"></div>
+        <div class="content sections"></div>
+        <div class="rightnav sections"></div>
+    </div>
+</body>
+
+</html>

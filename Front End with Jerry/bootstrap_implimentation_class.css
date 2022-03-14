@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    height: 46px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.site-wrapper {
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.644), rgba(31, 31, 31, 0.63)), url("http://themes.lucky-roo.com/rinjani-v3.6/html/assets/images/bg-home-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.navbar {
+    background-color: rgba(29, 28, 28, 0.233) !important;
+    border-bottom: 1px solid rgb(88, 88, 88);
+}
+
+.welcome-text {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 50%;
+}
+
+.intro {
+    color: white;
+    text-align: center;
+}
+
+h5.intro {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+
+h1.intro {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 62px;
+}
+
+p.intro {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+hr.intro {
+    background-color: #0baf4e;
+    border: 3px solid #0baf4e !important;
+    margin: 20px auto;
+    width: 30px;
+}
+
+a.intro {
+    background-color: #0baf4e;
+    box-shadow: 1px 1px 5px #4d4c4c;
+    /* display: block; */
+    margin: 35px auto !important;
+    padding: 15px 30px;
+}
+
+@media (max-width: 567px) {
+    .welcome-text {
+        margin-top: 180px;
+        width: 90%;
+    }
+    h1.intro {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .navbar {
+        background-color: black !important;
+    }
+    .navbar-light .navbar-toggler {
+        background-color: rgb(114, 114, 114) !important;
+    }
+}
