@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <!-- SJ -->
-    <h2 class="text-center">Vue To do App</h2>
+    <h2 class="text-center">To do Application</h2>
 
     <!-- Input -->
     <div class="d-flex">
@@ -28,8 +27,24 @@
       </thead>
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
-          <td>{{ task.name }}</td>
-          <td>{{ task.status }}</td>
+          <td>
+            <span :class="{ finished: task.status === 'finished' }">{{
+              task.name
+            }}</span>
+          </td>
+          <td style="width: 120px">
+            <span
+              @click="changeStatus(index)"
+              class="pointer"
+              :class="{
+                'text-danger': task.status === 'to-do',
+                'text-warning': task.status === 'in-progress',
+                'text-success': task.status === 'finished',
+              }"
+            >
+              {{ firstCharUpper(task.status) }}
+            </span>
+          </td>
 
           <td>
             <div class="text-center" @click="editTask(index)">
@@ -49,23 +64,24 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "TodoApp",
   props: {
-    msg: String,
+    msg: String, 
   },
 
   data() {
     return {
       task: "",
       editedTask: null,
+      availableStatuses: ["to-do", "in progress", "finished"],
       tasks: [
         {
-          name: "Work on C# Academy task",
+          name: "Work on C# Academy task, be a master in .NET Core with time",
           status: "to-do",
         },
 
         {
-          name: "Eat 1kg chocolate in 1 hour.",
+          name: "Stay focused on your journey .",
           status: "in-progress",
         },
       ],
@@ -93,12 +109,30 @@ export default {
       this.tasks.splice(index, 1);
     },
 
-    // editedTask(index) {
-    //   this.task = this.tasks[index].name;
-    //   this.editedTask = index;
-    // },
+    editTask(index) {
+      this.task = this.tasks[index].name;
+      this.editedTask === index;
+    },
+
+    changeStatus(index) {
+      let newIndex = this.availableStatuses.indexOf(this.tasks[index].status);
+      if (++newIndex > 2) newIndex = 0;
+      this.tasks[index].status = this.availableStatuses[newIndex];
+    },
+
+    firstCharUpper(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.pointer {
+  cursor: pointer;
+}
+
+.finished {
+  text-decoration: line-through;
+}
+</style>
